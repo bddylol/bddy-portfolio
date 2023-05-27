@@ -1,8 +1,8 @@
 <script>
-import CodingLanguage from '../lib/CodingLanguage.svelte';
-	import Music from '../lib/Music.svelte';
-	import Socials from '../lib/Socials.svelte';
-	import Time from '../lib/Time.svelte';
+import CodingLanguage from '$lib/CodingLanguage.svelte';
+	import Music from '$lib/Music.svelte';
+	import Socials from '$lib/Socials.svelte';
+	import Time from '$lib/Time.svelte';
 </script>
 
 <div class="flex gap-5 justify-between content-between">
