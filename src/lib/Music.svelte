@@ -53,8 +53,8 @@
 >
 	<header class="font-bold text-md" />
 	<footer class="flex flex-col">
-		<span class="text-xl font-bold" bind:this={song_title_elem}>Song Name</span>
-		<span bind:this={song_artist_elem}>Song Artist</span>
+		<span class="text-xl font-bold" bind:this={song_title_elem}>Not Listening</span>
+		<span bind:this={song_artist_elem}>N/A</span>
 	</footer>
 </section>
 
