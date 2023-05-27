@@ -1,8 +1,26 @@
+<script>
+	import { onMount } from 'svelte';
+	import io from 'socket.io-client';
+
+	let song_title_elem;
+	let song_artist_elem;
+
+	onMount(async () => {
+		const sock = io('https://now-playing-1.bddy.repl.co', {
+			path: '/io'
+		});
+
+		sock.on('connect', () => {
+			console.log('[music] Connected to now-playing backend server');
+		});
+	});
+</script>
+
 <section class="flex justify-between h-[155px] w-[155px] p-3 flex-col linear-bg">
 	<header class="font-bold text-md">MUSIC</header>
 	<footer class="flex flex-col">
-		<span class="font-bold text-xl">Song Name</span>
-		<span>Song Artist</span>
+		<span class="text-xl font-bold" bind:this={song_title_elem}>Song Name</span>
+		<span bind:this={song_artist_elem}>Song Artist</span>
 	</footer>
 </section>
 
