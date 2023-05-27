@@ -5,7 +5,7 @@
 	import Time from '$lib/Time.svelte';
 </script>
 
-<div class="flex content-between justify-between w-3/4 gap-5">
+<div class="flex items-center content-between justify-between w-3/4 gap-5">
 	<div class="flex flex-col flex-wrap items-center justify-center gap-5">
 		<div class="flex flex-col items-center justify-center">
 			<img src="favicon.png" alt="me as my pfp" class="w-24 h-24 rounded-full" />
@@ -14,7 +14,7 @@
 		</div>
 		<Music />
 	</div>
-	<div class="flex flex-wrap items-center gap-5">
+	<div class="flex flex-wrap items-center gap-5 h-fit">
 		<Time />
 		<Socials />
 		<CodingLanguage language="LANGUAGE" text="JavaScript & TypeScript" />
