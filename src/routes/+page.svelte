@@ -1,15 +1,20 @@
 <script>
-import CodingLanguage from '$lib/CodingLanguage.svelte';
+	import CodingLanguage from '$lib/CodingLanguage.svelte';
 	import Music from '$lib/Music.svelte';
 	import Socials from '$lib/Socials.svelte';
 	import Time from '$lib/Time.svelte';
 </script>
 
-<div class="flex gap-5 justify-between content-between">
-	<div class="flex flex-wrap gap-5 flex-col">
+<div class="flex content-between justify-between w-3/4 gap-5">
+	<div class="flex flex-col flex-wrap items-center justify-center gap-5">
+		<div class="flex flex-col items-center justify-center">
+			<img src="favicon.png" alt="me as my pfp" class="w-24 h-24 rounded-full" />
+			<h1 class="text-2xl font-bold">Avery</h1>
+			<h1 class="text-xl font-medium text-midnight-100">@bddylol</h1>
+		</div>
 		<Music />
 	</div>
-	<div class="flex flex-wrap gap-5 items-center ">
+	<div class="flex flex-wrap items-center gap-5">
 		<Time />
 		<Socials />
 		<CodingLanguage language="LANGUAGE" text="JavaScript & TypeScript" />
