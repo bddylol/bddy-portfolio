@@ -17,8 +17,8 @@
 	import io from 'socket.io-client';
 	import { onMount } from 'svelte';
 
-	let song_title_elem: HTMLSpanElement;
-	let song_artist_elem: HTMLSpanElement;
+	let track_name: string;
+	let track_artist: string;
 	let song_album_cover: string;
 	let track_progress: string;
 	let track_duration: string;
@@ -58,11 +58,12 @@
 
 		sock.on('update', (data: string) => {
 			let ld: ListeningData = JSON.parse(data);
-			song_title_elem.innerText = ld.trackName;
-			song_artist_elem.innerText = ld.artistName;
+			track_name = ld.trackName;
+			track_artist = ld.artistName;
 			song_album_cover = ld.albumImageUrl;
 			track_progress = secondsToMinutes(ld.trackProgress);
 			track_duration = secondsToMinutes(ld.trackDuration);
+			console.log(ld.trackName);
 		});
 	});
 </script>
@@ -99,30 +100,33 @@
 				<span class="text-[0.7rem] font-bold">MY TIME (EST)</span>
 				<span class="text-[0.8rem] text-midnight-100">{time}</span>
 			</div>
-			<div class="flex flex-col w-full gap-1">
-				<span class="text-[0.7rem] font-bold">LISTENING TO SPOTIFY</span>
-				<div class="flex flex-row items-center gap-2">
-					<img
-						src={song_album_cover}
-						alt="album cover"
-						class="w-16 h-16 border rounded-md border-midnight-400"
-					/>
-					<div class="flex flex-col">
-						<span
-							class="text-[0.9rem] font-semibold text-midnight-100"
-							bind:this={song_title_elem}
+			{#if track_name}
+				<div class="flex flex-col w-full gap-1">
+					<span class="text-[0.7rem] font-bold">LISTENING TO SPOTIFY</span>
+					<div class="flex flex-row items-center gap-2">
+						<img
+							src={song_album_cover}
+							alt="album cover"
+							class="w-16 h-16 border rounded-md border-midnight-400"
 						/>
-						<span class="text-[0.8rem] text-midnight-200" bind:this={song_artist_elem} />
-						<!-- <div class="flex flex-col w-full gap-0 mt-2">
-							<div class="w-full h-1 bg-white rounded-full" />
-							<div class="justify-between flex flex-row w-full text-[0.8rem]">
-								<span>{track_progress}</span>
-								<span>{track_duration}</span>
-							</div>
-						</div> -->
+						<div class="flex flex-col">
+							<span class="text-[0.9rem] font-semibold text-midnight-100">
+								{track_name}
+							</span>
+							<span class="text-[0.8rem] text-midnight-200">
+								{track_artist}
+							</span>
+							<!-- <div class="flex flex-col w-full gap-0 mt-2">
+				<div class="w-full h-1 bg-white rounded-full" />
+				<div class="justify-between flex flex-row w-full text-[0.8rem]">
+					<span>{track_progress}</span>
+					<span>{track_duration}</span>
+				</div>
+			</div> -->
+						</div>
 					</div>
 				</div>
-			</div>
+			{/if}
 		</div>
 	</div>
 </section>
