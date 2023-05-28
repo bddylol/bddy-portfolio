@@ -12,7 +12,7 @@
 		});
 	}
 
-	updateTime();
+	setInterval(updateTime, 1000);
 
 	import io from 'socket.io-client';
 	import { onMount } from 'svelte';
