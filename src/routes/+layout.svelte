@@ -41,7 +41,7 @@
 		name="twitter:description"
 		content="View some of the technologies and coding languages Avery knows. You can also see more about him here!"
 	/>
-	<meta name="twitter:image" content="preview.png" />
+	<meta name="twitter:image" content="preview.bmp" />
 
 	<!-- Meta Tags Generated via https://www.opengraph.xyz -->
 </svelte:head>
