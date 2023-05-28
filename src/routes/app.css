@@ -6,4 +6,9 @@ html,
 body,
 #svelte {
 	height: 100%;
+	cursor: url(http://www.rw-designer.com/cursor-extern.php?id=71612), auto;
+}
+
+a {
+	cursor: url(http://www.rw-designer.com/cursor-extern.php?id=71616), auto;
 }
