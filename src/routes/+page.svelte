@@ -18,16 +18,27 @@
 		</div>
 		<Music />
 	</div>
-	<div class="flex-wrap items-center hidden gap-5 h-fit md:flex">
-		<CodingLanguage language="LANGUAGE" text="JavaScript & TypeScript" />
-		<CodingLanguage language="LANGUAGE" text="HTML & CSS" />
-		<CodingLanguage language="LIBRARY" text="Tailwind CSS" />
-		<CodingLanguage language="LIBRARY" text="SCSS" />
-		<CodingLanguage language="LIBRARY" text="Bootstrap" />
-		<CodingLanguage language="FRAMEWORK" text="Next.js" />
-		<CodingLanguage language="FRAMEWORK" text="React.js" />
-		<CodingLanguage language="FRAMEWORK" text="Svelte" />
-		<CodingLanguage language="TOOL" text="Expo/React Native" />
-		<CodingLanguage language="IDE" text="VSCode & Jetbrains" />
+	<div class="flex flex-col gap-4">
+		<div class="flex flex-row w-full gap-4">
+			<a href="https://bddy.lol" class="text-xl font-semibold text-blue-400 hover:text-purple-400"
+				>home</a
+			>
+			<div>|</div>
+			<a href="https://files.bddy.lol" class="text-xl text-blue-200 hover:text-purple-400">files</a>
+			<div>|</div>
+			<a href="https://chat.bddy.lol" class="text-xl text-blue-200 hover:text-purple-400">chat</a>
+		</div>
+		<div class="flex-wrap items-center hidden gap-5 h-fit md:flex">
+			<CodingLanguage language="LANGUAGE" text="JavaScript & TypeScript" />
+			<CodingLanguage language="LANGUAGE" text="HTML & CSS" />
+			<CodingLanguage language="LIBRARY" text="Tailwind CSS" />
+			<CodingLanguage language="LIBRARY" text="SCSS" />
+			<CodingLanguage language="LIBRARY" text="Bootstrap" />
+			<CodingLanguage language="FRAMEWORK" text="Next.js" />
+			<CodingLanguage language="FRAMEWORK" text="React.js" />
+			<CodingLanguage language="FRAMEWORK" text="Svelte" />
+			<CodingLanguage language="TOOL" text="Expo/React Native" />
+			<CodingLanguage language="IDE" text="VSCode & Jetbrains" />
+		</div>
 	</div>
 </div>
