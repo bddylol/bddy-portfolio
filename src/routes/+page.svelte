@@ -11,13 +11,12 @@
 
 <div class="flex items-center content-between justify-between w-3/4 gap-5">
 	<div class="flex flex-col flex-wrap items-center justify-center w-full gap-5 md:w-fit">
-		<!-- <div class="flex flex-col items-center justify-center">
+		<div class="flex flex-col items-center justify-center">
 			<img src="favicon.png" alt="me as my pfp" class="w-24 h-24 rounded-full" />
 			<h1 class="text-2xl font-bold">Avery</h1>
 			<h1 class="text-xl font-medium text-midnight-100">@bddylol</h1>
-		</div> -->
-		<!-- <Music /> -->
-		<UserCard />
+		</div>
+		<Music />
 	</div>
 	<div class="flex-wrap items-center hidden gap-5 h-fit md:flex">
 		<CodingLanguage language="LANGUAGE" text="JavaScript & TypeScript" />
