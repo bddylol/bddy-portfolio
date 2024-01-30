@@ -16,7 +16,7 @@
 
 <div
 	class="flex items-center justify-center w-full h-full p-5"
-	style={`background: radial-gradient(25rem at ${x} ${y}, rgba(23, 39, 110, 0.15), transparent);`}
+	style={`background: radial-gradient(25rem at ${x} ${y}, rgba(204, 131, 131, 0.15), transparent);`}
 >
 	<slot />
 </div>

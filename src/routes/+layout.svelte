@@ -6,9 +6,7 @@
 
 <Seo />
 
-<div
-	class="flex items-center justify-center w-full h-full overflow-auto bg-midnight-600 text-midnight-50"
->
+<div class="flex items-center justify-center w-full h-full overflow-auto text-midnight-50">
 	<CursorProvider>
 		<slot />
 	</CursorProvider>
